@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <p>x=10, y=5</p>
+    <p id="p1">x+y=</p>
+    <p id="p2">x-y=</p>
+    <p id="p3">x*y=</p>
+    <p id="p4">x/y=</p>
+    <p id="p5">x%y=</p>
+    <p id="p6">x++=</p>
+    <p id="p7">x--=</p>
+
+    <script>
+        let x=10,y=5;
+        document.getElementById("p1").innerHTML += (x+y);
+        document.getElementById("p2").innerHTML += (x-y);
+        document.getElementById("p3").innerHTML += (x*y);
+        document.getElementById("p4").innerHTML += (x/y);
+        document.getElementById("p5").innerHTML += (x%y);
+        document.getElementById("p6").innerHTML += (x++);
+        document.getElementById("p7").innerHTML += (x--);
+    </script>
+</body>
+</html>

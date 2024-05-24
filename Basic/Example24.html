@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobiograph Number</title>
+</head>
+<body>
+    <h1>Autobiography Number</h1>
+    Enter a number:<input type="number" id="numberInput" name="numberInput">
+    <script>
+    
+        function isAutobiographicalNumber(n) {
+           let str = n.toString();
+           let length = str.length;
+           let count = Array(length).fill(0);
+
+    for (let char of str) {
+        let digit = parseInt(char);
+        if (digit < length) {
+            count[digit]++;
+        }
+    }
+
+    for (let i = 0; i < length; i++) {
+        if (count[i] !== parseInt(str[i])) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+console.log(isAutobiographicalNumber(1210)); 
+console.log(isAutobiographicalNumber(2020)); 
+console.log(isAutobiographicalNumber(21201));
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Palindrome Number Checker</title>
+</head>
+<body>
+    <h1>Palindrome Number Checker</h1>
+    <p id="p1"></p>
+
+    <script>
+        var input = prompt("Enter the number: ");
+        var rem, rev = 0, n = parseInt(input, 10);
+        var originalNumber = n;
+
+        if (isNaN(n)) {
+            document.getElementById("p1").innerHTML = "Invalid input! Please enter a valid number.";
+        } else {
+            while (n > 0) {
+                rem = n % 10;
+                rev = rev * 10 + rem;
+                n = Math.floor(n / 10);
+            }
+
+            if (originalNumber === rev) {
+                document.getElementById("p1").innerHTML = `The number ${input} is a palindrome.`;
+            } else {
+                document.getElementById("p1").innerHTML = `The number ${input} is not a palindrome.`;
+            }
+        }
+    </script>
+</body>
+</html>

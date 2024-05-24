@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sum of Positive Numbers</title>
+</head>
+<body>
+    <h1>Sum of Positive Numbers</h1>
+    <p id="p1"></p>
+
+    <script>
+        let sum = 0;
+        let input;
+
+        while (true) {
+            input = prompt("Enter a number (or type 'stop' to finish):");
+
+            if (input.toLowerCase() === 'stop') {
+                break;
+            }
+
+            let number = parseFloat(input);
+
+            if (isNaN(number)) {
+                alert("Invalid input! Please enter a valid number.");
+            } else if (number >= 0) {
+                sum += number;
+            }
+        }
+
+        document.getElementById("p1").innerHTML = `The sum of positive numbers is ${sum}.`;
+    </script>
+</body>
+</html>

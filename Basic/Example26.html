@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spy Number Checker</title>
+</head>
+<body>
+    <h1>Spy Number Checker</h1>
+    Enter a number:
+    <input type="number" id="input">
+    <button onclick="spynumber()">Submit</button>
+    <p id="result"></p>
+    <script>
+        function spynumber() {
+            let num = document.getElementById("input").value;
+            let sum = 0;
+            let product = 1;
+
+            for (let char of num) {
+                let digit = parseInt(char);
+                sum += digit;
+                product *= digit;
+            }
+
+            let result = document.getElementById("result");
+            if (sum === product) {
+                result.textContent = num + " is a spy number.";
+            } else {
+                result.textContent = num + " is not a spy number.";
+            }
+        }
+    </script>
+</body>
+</html>

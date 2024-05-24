@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h1>Demo: Reverse a number</h1>
+    <p id="p1"></p>
+
+    <script>
+        var input= prompt("enter the number: ");
+        var rem, rev=0, n=input;
+        while(n>0){
+            rem=n%10;
+            rev=rev*10 + rem;
+            n=Math.floor(n/10);
+        }
+
+        document.getElementById("p1").innerHTML = 'Reverse of a number ${input} is ${rev}';
+
+    </script>
+</body>
+</html>

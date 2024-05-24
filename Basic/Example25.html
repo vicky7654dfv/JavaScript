@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Karshad Number Checker</title>
+</head>
+<body>
+    <h1>Karshad Number Checker</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" name="numberInput">
+    <button onclick="checkKarshad()">Check</button>
+
+    <script>
+        function checkKarshad() {
+            let numStr = document.getElementById("numberInput").value;
+            let num = parseInt(numStr, 10);
+            let sumOfDigits = 0;
+            for (let char of numStr) {
+                sumOfDigits += parseInt(char, 10);
+            }
+            if (num % sumOfDigits === 0) {
+                alert('YES');
+            } else {
+                alert('NO');
+            }
+        }
+    </script>
+</body>
+</html>

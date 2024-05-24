@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h1>Demo:JavaScript object</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+
+    <script>
+        var person= new Objext();
+        person.firstName = "john";
+        person[lastName] = "Doe"
+        person.age=25;
+        person.getFullName=function(){
+            return this.firstName + ' ' + this.lastname;
+        }
+        document.getElementById("p1").innerHTML = person["firstName"];
+        document.getElementById("p2").innerHTML = person.firstName;
+        document.getElementById("p3").innerHTML = person[lastName];
+        document.getElementById("p4").innerHTML = person.lastName;
+        document.getElementById("p5").innerHTML = person.getFullName();
+        document.getElementById("p6").innerHTML = person.age;
+    </script>
+    
+</body>

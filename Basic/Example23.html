@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Autobiographical Number</title>
+</head>
+<body>
+    <h1>Autobiographical Number</h1>
+    <label for="numberInput">Enter a number: </label>
+    <input type="number" id="numberInput" name="numberInput">
+    <button onclick="Autobiographical()">Check</button>
+    <p id="result"></p>
+                         
+    <script>
+        function Autobiographical() {
+            let numStr = document.getElementById("numberInput").value;
+            let length = numStr.length;
+            let counts = Array(length).fill(0);
+
+            // Count occurrences of each digit
+            for (let char of numStr) {
+                let digit = parseInt(char, 10);
+                if (digit >= length) {
+                    document.getElementById("result").innerHTML = `${numStr} is not an autobiographical number.`;
+                    return;
+                }
+                counts[digit]++;
+            }
+
+            for (let i = 0; i < length; i++) {
+                if (counts[i] != parseInt(numStr.charAt(i), 10)) {
+                    document.getElementById("result").innerHTML = `${numStr} is not an autobiographical number.`;
+                    return;
+                }
+            }
+
+            document.getElementById("result").innerHTML = `${numStr} is an autobiographical number.`;
+        }
+    </script>
+</body>
+</html>

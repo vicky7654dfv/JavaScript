@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h1>Demo: Factorial</h1>
+    <p id="p1"></p>
+
+    <script>
+        var input= prompt("enter the number: ");
+        var fact=1;
+
+        for(let i=1;i<=input;i++){
+            fact=fact*i;
+        }
+        document.getElementById("p1").innerHTML = 'Factorial of a number ${input} is ${fact}';
+
+    </script>
+</body>
+</html>

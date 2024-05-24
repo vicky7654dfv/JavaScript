@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tech(number){
+            let str4 = number.toString();
+            let len = str4.length;
+            if(len==4){
+                let n1 = Math.floor(number/100);
+                let n2 = number%100;
+                let result = n1+n2;
+                if(result*result==number){
+                    console.log("tech number")
+                }
+                else{
+                    console.log("Not a valid Number")
+                }
+
+            }
+        }
+
+        let num = parseInt(prompt("enter the number :"));
+        tech(num);
+    </script>
+</body>
+</html>
