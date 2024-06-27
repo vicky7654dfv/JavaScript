@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "televison",
+            "price": 23000,
+            "qty": 1
+        },
+        {
+            "id": 2,
+            "name": "monitor",
+            "price": 12000,
+            "qty": 1
+        },
+        {
+            "id": 3,
+            "name": "washing machine",
+            "price": 32000,
+            "qty": 1
+        },
+        {
+            "id": 4,
+            "name": "cooker",
+            "price": 2000,
+            "qty": 1
+        },
+        {
+            "id": 5,
+            "name": "blender",
+            "price": 5000,
+            "qty": 1
+        }
+    ]
+}

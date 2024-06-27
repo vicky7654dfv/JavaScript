@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User form</h1>
+    <form id="myForm">
+    Username: <input type="text" id="uname" required><br><br>
+    Password: <input type="text" id="pass" required><br><br>
+    Retypepassword: <input type="text" id="repass" required><br><br>
+    <input type="submit" id="sub" required>
+    </form>
+
+
+    <script>
+        function validate() {
+            var name=document.myform.uname.value;
+            var pass=document.myform.pass.value;
+            var repass=document.myform.repass.value;
+        
+       
+       if(name==null || name=='') {
+          alert("Please enter a valid username");
+          return false;
+        }
+          else if(pass != repass) {
+               alert("Passwords do not match.");
+               return false;
+    }
+
+               else if(pass.length>8 || pass=='')
+                 alert("Password should be less than or equal to 8 characters");
+               else 
+               window.location.href= "https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document";
+
+        }       
+  
+    </script>
+</body>
+</html>

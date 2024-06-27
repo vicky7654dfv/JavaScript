@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Display Values</title>
+</head>
+<body>
+    <h1>Add and Display the Values</h1>
+    <label for="elementInput">Enter the number:</label>
+    <input type="text" id="elementInput">
+    <button onclick="addElement()">Add</button>
+    <button onclick="displayElements()">Display</button>
+
+    <ul id="displayList"></ul>
+
+    <script>
+        let elements = [];
+
+        function addElement() {
+            const elementInput = document.getElementById('elementInput');
+            const element = elementInput.value;
+            if (element) {
+                elements.push(element);
+                elementInput.value = '';
+            }
+        }
+
+        function displayElements() {
+            const displayList = document.getElementById('displayList');
+            displayList.innerHTML = ''; // Clear the previous content
+            elements.forEach(function(element) {
+                const li = document.createElement('li');
+                li.textContent = element;
+                displayList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate Elements</title>
+</head>
+<body>
+    <h1>Remove duplicate elements from the Array</h1>
+
+    <script>
+        let input = [1, 2, 2, 3, 4, 5, 3, 4];
+let output = [];
+
+input.forEach((item) => {
+    if (!output.includes(item)) {
+        output.push(item);
+    }
+});
+
+console.log(output);
+    </script>
+</body>
+</html>

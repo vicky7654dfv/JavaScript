@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Hello world program in JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#p1").on({
+                mouseenter:function(){
+                    $(this).css('background-color','yellow')
+                },
+                mouseleave:function(){
+                    $(this).css('background-color','red')
+                },
+                click:function(){
+                    $(this).css('background-color','cyan')
+                },
+                hover:function(){
+                    $(this).css('background-color','green')
+                },
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <p id="p1">This is a Paragraph</p>
+</body>
+</html>

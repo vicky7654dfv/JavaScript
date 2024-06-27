@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort Visualization</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        .step {
+            border: 1px solid black;
+            padding: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bubble Sort Visualization</h1>
+    <div id="container"></div>
+
+    <script>
+        // Function to sort an array using Bubble Sort and visualize each step
+        function bubbleSortWithVisualization(arr) {
+            const steps = [];
+            const n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    // Swap if the element found is greater than the next element
+                    if (arr[j] > arr[j + 1]) {
+                        const temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                        // Push a copy of the current state of the array to the steps array
+                        steps.push([...arr]);
+                    }
+                }
+            }
+            return steps;
+        }
+
+        // Example array to be sorted
+        const array = [64, 34, 25, 12, 22, 11, 90];
+
+        // Sort the array using Bubble Sort with visualization
+        const sortingSteps = bubbleSortWithVisualization(array.slice());
+
+        // Display the steps
+        const container = document.getElementById("container");
+        sortingSteps.forEach((stepArray, index) => {
+            const stepDiv = document.createElement("div");
+            stepDiv.classList.add("step");
+            stepDiv.textContent = `Step ${index + 1}: [${stepArray.join(", ")}]`;
+            container.appendChild(stepDiv);
+        });
+    </script>
+</body>
+</html>

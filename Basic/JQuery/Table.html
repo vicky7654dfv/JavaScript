@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello world program in JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("tr:even").css("background-color","yellow")
+            $("tr:odd").css("background-color","red")
+        })
+    </script>
+</head>
+<body>
+    <h1>Welcome to table page</h1>
+
+    <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <th>TCS</th>
+            <th>India</th>
+        </tr>
+        <tr>
+            <th>Steel manufacturing unit</th>
+            <th>Germany</th>
+        </tr>
+        <tr>
+            <th>Coffee planet</th>
+            <th>USA</th>
+        </tr>
+        <tr>
+            <th>Olive garden</th>
+            <th>Italy</th>
+        </tr>
+    </table>
+</body>
+</html>

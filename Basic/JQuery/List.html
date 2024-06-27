@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello world program in JQuery</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("ul li:first").hide()
+            })
+        })
+    </script>
+</head>
+<body>
+<p>List 1</p>
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+
+<p>List 2</p>
+<ul>
+    <li>Mango</li>
+    <li>Banana</li>
+    <li>Orange</li>
+</ul>
+
+<p>List 3</p>
+<ul>
+    <li>Pencil</li>
+    <li>Pen</li>
+    <li>Erasor</li>
+</ul>
+<button>Click me</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="class1">Imarticus learning  - Google maps</div>
+    <p>Displaying the latitude and longitude of your location</p>
+    <button class="geo" onclick="getlocation()">
+        Click me</button>
+        <div id="demo2" style="width: 500px; height: 500px"></div>
+        <script src="https://maps.google.com/maps/api/js?sensor=false">
+
+        </script>
+
+    <script type="text/javascript" >   
+            let variable1 = document.getElementById("demo2");
+            function getlocation (){
+                if(navigator.getlocation){
+                    navigator.getlocation.getCurrentPosition(showLoc)
+                }
+        }
+        function showLoc(pos){
+            latt =  pos.coords.latitude;
+            long = pos.coords.longitude;
+            var lattlong = new google.maps.latLng(latt,long);
+            var OPtion = {
+                center: lattlong,
+                zoom: 10,
+                mapTypControl: true,
+                navigationControlOption: {
+                    style: google.maps.navigationControlStyle.SMALL,
+                },
+            };
+                var mapg = new google.maps.Map(
+                    document.getElementById("demo2"),
+                    OPTions
+                );
+                var markerg = new google.maps.Marker({
+                    position: lattlong,
+                    map: mapg,
+                    tittle: "you are here",
+                } );
+
+            }
+    </script>
+</body>
+</html>

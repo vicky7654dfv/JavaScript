@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating an Object</title>
+</head>
+<body>
+    <h1>Demo : Accessing Arrays</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+
+    <script>
+        let num1 = [1,2,3,4];
+        let str1=["one","two","three"];
+        let float1=[1.1,2.2,3.3];
+        let bool=[true,false,true];
+        let data=[1,"Tom",true,250000,5.5];
+        let cities=["Chennai","Mumbai","Delhi"];
+
+        cities[3]="Coimbatore";
+
+     document.getElementById("p1").innerHTML=num1;
+     document.getElementById("p2").innerHTML=str1[2];
+     document.getElementById("p3").innerHTML=float1;
+     document.getElementById("p4").innerHTML=bool;
+     document.getElementById("p5").innerHTML=data;
+     document.getElementById("p6").innerHTML=cities;
+    </script>
+
+</body>
+</html>
